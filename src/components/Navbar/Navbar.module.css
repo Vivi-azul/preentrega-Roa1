@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    background-color: rgb(204, 249, 234);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}

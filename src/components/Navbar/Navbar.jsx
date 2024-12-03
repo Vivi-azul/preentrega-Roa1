@@ -1,5 +1,5 @@
 import classes from './Navbar.module.css'
-import Cartwidget from '../CartWidget/Cartwidget'
+import Cartwidget from '../CartWidget/CartWidget'
 
 const Navbar = (props) => {
     return (

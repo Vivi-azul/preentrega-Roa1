@@ -1,10 +1,9 @@
 import Navbar from './components/Navbar/Navbar'
-import { useState } from 'react'
 import React from 'react'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import './App.css'
 
 function App() {

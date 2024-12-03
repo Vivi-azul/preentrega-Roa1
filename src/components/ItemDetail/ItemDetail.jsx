@@ -1,4 +1,4 @@
-import ItemCount from "../ItemCount/ItemCount"
+import ItemCount from "../ItemCount/ItemCount.jsx"
 
 const ItemDetail = ({ id, nombre, categoria, precio, img, descripcion, stock }) => {
     return (

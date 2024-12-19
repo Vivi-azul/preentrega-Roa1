@@ -1,16 +1,29 @@
-import ItemCount from "../ItemCount/ItemCount.jsx"
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import ItemCount from "../ItemCount/ItemCount.jsx"; 
 
-const ItemDetail = ({ id, nombre, categoria, precio, img, descripcion, stock }) => {
-    return (
-        <article>
-            <h4>Categoria: {categoria}</h4>
-            <h3> {nombre} </h3>
-            <img src={img} style={{ width: 100}} />
-            <h4>${precio}</h4>
-           <h4>Descripcion: {descripcion} </h4>
-           <ItemCount stock={stock} />
-        </article>
-    )
-    }
+const ItemDetail = ({ producto }) => {
+  const { agregarProducto } = useContext(CartContext);
 
-    export default ItemDetail
+  const agregarAlCarrito = (contador) => {
+    const productoCarrito = {
+      ...producto,
+      cantidad: contador
+    };
+    agregarProducto(productoCarrito);
+  };
+
+  return (
+    <div className="item-detail">
+      <img src={producto.imagen} alt={producto.nombre} />
+      <div className="detail">
+        <h2>{producto.nombre}</h2>
+        <p>{producto.descripcion}</p>
+        <p>Precio: ${producto.precio}</p>
+        <ItemCount agregarAlCarrito={agregarAlCarrito} stock={producto.stock} /> 
+      </div>
+    </div>
+  );
+};
+
+export default ItemDetail;

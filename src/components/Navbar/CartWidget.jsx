@@ -1,12 +1,12 @@
-import cart from './assets/carrito_1.png'
+const cart = require("./assets/carrito_1.png");
 
-const Cartwidget = () => {
+const CartWidget = () => {
     return (
         <div>
            <img src={cart} alt="carrito" style={{width: '30px'}} />
-            2
+            
         </div>
     );
 }
 
-export default Cartwidget
+export default CartWidget
